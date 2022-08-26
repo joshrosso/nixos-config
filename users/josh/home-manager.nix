@@ -26,7 +26,6 @@ let sources = import ../../nix/sources.nix; in {
 
     pkgs.go
     pkgs.gopls
-    pkgs.zig-master
 
     pkgs.tlaplusToolbox
     pkgs.tetex
@@ -92,8 +91,7 @@ let sources = import ../../nix/sources.nix; in {
     config = {
       whitelist = {
         prefix= [
-          "$HOME/code/go/src/github.com/hashicorp"
-          "$HOME/code/go/src/github.com/mitchellh"
+          "$HOME/code/go/src/github.com/joshrosso"
         ];
 
         exact = ["$HOME/.envrc"];
@@ -140,8 +138,8 @@ let sources = import ../../nix/sources.nix; in {
 
   programs.git = {
     enable = true;
-    userName = "Mitchell Hashimoto";
-    userEmail = "mitchell.hashimoto@gmail.com";
+    userName = "joshrosso";
+    userEmail = "joshrosso@gmail.com";
     signing = {
       key = "523D5DC389D273BC";
       signByDefault = true;
@@ -155,7 +153,7 @@ let sources = import ../../nix/sources.nix; in {
       color.ui = true;
       core.askPass = ""; # needs to be empty to use terminal for ask pass
       credential.helper = "store"; # want to make this more secure
-      github.user = "mitchellh";
+      github.user = "joshrosso";
       push.default = "tracking";
       init.defaultBranch = "main";
     };
@@ -164,7 +162,7 @@ let sources = import ../../nix/sources.nix; in {
   programs.go = {
     enable = true;
     goPath = "code/go";
-    goPrivate = [ "github.com/mitchellh" "github.com/hashicorp" "rfc822.mx" ];
+    goPrivate = [ "github.com/joshrosso" ];
   };
 
   programs.tmux = {
@@ -238,7 +236,6 @@ let sources = import ../../nix/sources.nix; in {
       customVim.vim-misc
       customVim.vim-pgsql
       customVim.vim-tla
-      customVim.vim-zig
       customVim.pigeon
       customVim.AfterColors
 

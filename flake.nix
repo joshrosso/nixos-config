@@ -1,5 +1,5 @@
 {
-  description = "NixOS systems and tools by mitchellh";
+  description = "NixOS systems and tools for joshrosso origianally pulled from mitchellh's work";
 
   inputs = {
     # Pin our primary nixpkgs repository. This is the main nixpkgs repository
@@ -19,7 +19,6 @@
 
     # Other packages
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
-    zig.url = "github:arqv/zig-overlay";
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs: let
@@ -30,9 +29,6 @@
       inputs.neovim-nightly-overlay.overlay
 
       (final: prev: {
-        # Zig doesn't export an overlay so we do it here
-        zig-master = inputs.zig.packages.${prev.system}.master.latest;
-
         # Go we always want the latest version
         go = inputs.nixpkgs-unstable.legacyPackages.${prev.system}.go_1_19;
       })
@@ -41,7 +37,7 @@
     nixosConfigurations.vm-aarch64 = mkVM "vm-aarch64" {
       inherit nixpkgs home-manager;
       system = "aarch64-linux";
-      user   = "mitchellh";
+      user   = "josh";
 
       overlays = overlays ++ [(final: prev: {
         # TODO: drop after release following NixOS 22.05
@@ -69,19 +65,19 @@
     nixosConfigurations.vm-aarch64-prl = mkVM "vm-aarch64-prl" rec {
       inherit overlays nixpkgs home-manager;
       system = "aarch64-linux";
-      user   = "mitchellh";
+      user   = "josh";
     };
 
     nixosConfigurations.vm-aarch64-utm = mkVM "vm-aarch64-utm" rec {
       inherit overlays nixpkgs home-manager;
       system = "aarch64-linux";
-      user   = "mitchellh";
+      user   = "josh";
     };
 
     nixosConfigurations.vm-intel = mkVM "vm-intel" rec {
       inherit nixpkgs home-manager overlays;
       system = "x86_64-linux";
-      user   = "mitchellh";
+      user   = "josh";
     };
   };
 }
