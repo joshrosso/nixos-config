@@ -156,6 +156,7 @@ let sources = import ../../nix/sources.nix; in {
       github.user = "joshrosso";
       push.default = "tracking";
       init.defaultBranch = "main";
+      url."git@github.com:".insteadOf = "https://github.com";
     };
   };
 

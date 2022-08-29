@@ -31,21 +31,6 @@
         "type": "github"
       }
     },
-    "flake-utils_2": {
-      "locked": {
-        "lastModified": 1629481132,
-        "narHash": "sha256-JHgasjPR0/J1J3DRm4KxM4zTyAj4IOJY8vIl75v/kPI=",
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "rev": "997f7efcb746a9c140ce1f13c72263189225f482",
-        "type": "github"
-      },
-      "original": {
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "type": "github"
-      }
-    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -159,48 +144,12 @@
         "type": "github"
       }
     },
-    "nixpkgs_3": {
-      "locked": {
-        "lastModified": 1631288242,
-        "narHash": "sha256-sXm4KiKs7qSIf5oTAmrlsEvBW193sFj+tKYVirBaXz0=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "0e24c87754430cb6ad2f8c8c8021b29834a8845e",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixpkgs-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "root": {
       "inputs": {
         "home-manager": "home-manager",
         "neovim-nightly-overlay": "neovim-nightly-overlay",
         "nixpkgs": "nixpkgs_2",
-        "nixpkgs-unstable": "nixpkgs-unstable",
-        "zig": "zig"
-      }
-    },
-    "zig": {
-      "inputs": {
-        "flake-utils": "flake-utils_2",
-        "nixpkgs": "nixpkgs_3"
-      },
-      "locked": {
-        "lastModified": 1660178993,
-        "narHash": "sha256-p4rKj+BAGw6Wjfg+dMPpdIpacaPm5DGjJAeZwqaxrfM=",
-        "owner": "arqv",
-        "repo": "zig-overlay",
-        "rev": "e6d6b091872e760df1159229c00de7c8bed176fc",
-        "type": "github"
-      },
-      "original": {
-        "owner": "arqv",
-        "repo": "zig-overlay",
-        "type": "github"
+        "nixpkgs-unstable": "nixpkgs-unstable"
       }
     }
   },
