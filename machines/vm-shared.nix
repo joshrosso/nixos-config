@@ -47,6 +47,7 @@
 
   # Virtualization settings
   virtualisation.docker.enable = true;
+  virtualisation.docker.enableOnBoot = false;
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
