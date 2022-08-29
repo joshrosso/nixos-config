@@ -141,7 +141,7 @@ let sources = import ../../nix/sources.nix; in {
     userName = "joshrosso";
     userEmail = "joshrosso@gmail.com";
     signing = {
-      key = "523D5DC389D273BC";
+      key = "D5CD572310881E88";
       signByDefault = true;
     };
     aliases = {
