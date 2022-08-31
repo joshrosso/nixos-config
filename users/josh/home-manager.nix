@@ -244,6 +244,7 @@ let sources = import ../../nix/sources.nix; in {
       customVim.vim-nord
       customVim.nvim-comment
       customVim.nvim-lspconfig
+
       customVim.nvim-plenary # required for telescope
       customVim.nvim-telescope
       customVim.nvim-treesitter
@@ -258,6 +259,13 @@ let sources = import ../../nix/sources.nix; in {
       vimPlugins.vim-markdown
       vimPlugins.vim-nix
       vimPlugins.typescript-vim
+      vimPlugins.cmp-nvim-lsp
+      vimPlugins.cmp-buffer
+      vimPlugins.cmp-path
+      vimPlugins.cmp-cmdline
+      vimPlugins.nvim-cmp
+      vimPlugins.vim-vsnip
+      vimPlugins.cmp-vsnip
     ];
 
     extraConfig = (import ./vim-config.nix) { inherit sources; };
